@@ -1,0 +1,13 @@
+class Solution {
+    public int passThePillow(int n, int time) {
+        int fullPasses = time/(n-1);
+        int remainingPasses = time%(n-1);
+
+        if(fullPasses%2 == 0){
+            return remainingPasses+1;
+        }
+        else{
+            return n-remainingPasses;
+        }
+    }
+}
